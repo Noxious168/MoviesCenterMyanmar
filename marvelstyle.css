@@ -105,6 +105,7 @@ body{
 	margin:80px 20px 20px 20px;
 	border-radius: 20px;
 	background: transparent;
+	overflow: auto;
 }
 .titleleft .titleAvenger{
 	top: 0;
