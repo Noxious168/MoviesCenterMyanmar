@@ -3,73 +3,132 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-body{
+#bg{
 	width: 100%;
 	min-height: 100vh;
 	align-items: center;
 	justify-content: center;
 	display: flex;
-	background: linear-gradient(to left bottom,#100000 10%,#2e1e1e);
+	position: absolute;
+	background: #2d1d1d;
 }
+
 .table{
-	min-height: 100vh;
-	margin-top: 70px;
-	margin-bottom: 70px;
+	position: absolute;
+	width: 80%;
+	max-width: 800px;
+	height: 800px;
+	overflow: hidden;
 }
 .row{
 	width: 100%;
-	height: 260px;
+	height: 280px;
+	margin: 15px 30px 15px 30px;
 }
 .items{
-	width: 200px;
-	height: 260px;
-	padding: 15px;
+	width: 220px;
+	height: 100%;
 }
 .moviesframe{
 	width: 100%;
 	height: 100%;
 }
 .moviesframe img{
-	width: 100%;
-	height: 210px;
+	width: 160px;
+	height: 200px;
+	margin: 0 30px 12px 30px;
 	top: 0;
-	margin-bottom:15px;
-	border-radius: 20px;
-	border: 1px solid rgba(0, 0, 0, 0.3);
-	box-shadow: 10px 10px rgba(0, 0, 0, 0.5)inset;
-}
-.nextPagediv{
-	position: absolute;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 100%;
-	height: 80px;
-	margin-bottom: -120px;
-	position: absolute;
+	object-fit: cover;
+	border: 2px solid rgba(0, 0, 0, 1.0);
+	border-radius: 20px;
+	filter: brightness(0.7);
+	cursor: pointer;
+}
+.moviesframe img:hover{
+	filter: brightness(1.25);
+	box-shadow: inset 10px 10px 5px 5px rgba(0, 0, 0, 1.0),
+				10px 10px 10px 10px rgba(0, 0, 0, 0.2),
+				10px 10px 15px 15px rgba(0, 0, 0, 0.3),
+				10px 10px 20px 20px rgba(0, 0, 0, 0.4),
+				10px 10px 25px 25px rgba(0, 0, 0, 0.5),
+				10px 10px 30px 30px rgba(0, 0, 0, 0.6);
+}
+.moviesframe button{
+	cursor: pointer;
+	width: 80%;
+	height: 45px;
 	bottom: 0;
+	background: transparent;
+	border: 2px solid rgba(255, 0, 0, 0.6);
+	border-radius: 50px;
+	color: rgba(255, 0, 0, 0.7);
 }
-#nextpagebtn{
-	width: 80px;
-	height: 100%;
-	border-radius: 50%;
-	background: linear-gradient(#1e1e1e,#000000,#1e0000);
-	border: none;
+.moviesframe button:hover{
+	box-shadow: inset 10px 10px 20px 20px rgba(255, 0, 0, 0.4),
+				4px 4px 20px 5px rgba(255, 0, 0, 0.2),
+				5px 5px 20px 6px rgba(255, 0, 0, 0.2),
+				6px 6px 20px 7px rgba(255, 0, 0, 0.2),
+				7px 7px 20px 8px rgba(255, 0, 0, 0.2),
+				8px 8px 20px 10px rgba(255, 0, 0, 0.2);
+				color: rgba(255, 0, 0, 1.0);
+	animation-delay: 0.2s;
+	animation: buttonAnimation 3s linear infinite;
 }
-#nextpagebtn:hover{
-	width: 85px;
-	height: 110%;
-	transition-delay: 0.1s;
-	transition-style: preserve-3d;
-	background: rgba(143, 4, 61,0.4);
-	box-shadow:0 0 50px 10px rgba(143, 4, 61,0.4),
-	0 5px 0 2em transparent;
+@keyframes buttonAnimation{
+	0%{
+		transform: translateZ(0) rotateZ(0deg);
+		box-shadow: inset 10px 10px 20px 20px rgba(255, 0, 0, 0.4),
+					4px 4px 20px 5px rgba(255, 0, 0, 0.2),
+					5px 5px 20px 6px rgba(255, 0, 0, 0.2),
+					6px 6px 20px 7px rgba(255, 0, 0, 0.2),
+					7px 7px 20px 8px rgba(255, 0, 0, 0.2),
+					8px 8px 20px 10px rgba(255, 0, 0, 0.2);
+		color: rgba(255, 0, 0, 1.0);
+	}
+	25%{
+		transform: translateZ(-10px) rotateZ(10deg);
+		box-shadow: inset 10px 10px 20px 20px rgba(0, 255, 0, 0.4),
+				4px 4px 20px 5px rgba(0, 255, 0, 0.2),
+				5px 5px 20px 6px rgba(0, 255, 0, 0.2),
+				6px 6px 20px 7px rgba(0, 255, 0, 0.2),
+				7px 7px 20px 8px rgba(0, 255, 0, 0.2),
+				8px 8px 20px 10px rgba(0, 255, 0, 0.2);
+		color: rgba(0, 255, 0, 1.0);
+	}
+	50%{
+		transform: translateZ(10px) rotateZ(-10deg);
+		box-shadow: inset 10px 10px 20px 20px rgba(0, 0, 255, 0.4),
+				4px 4px 20px 5px rgba(0, 0, 255, 0.2),
+				5px 5px 20px 6px rgba(0, 0, 255, 0.2),
+				6px 6px 20px 7px rgba(0, 0, 255, 0.2),
+				7px 7px 20px 8px rgba(0, 0, 255, 0.2),
+				8px 8px 20px 10px rgba(0, 0, 255, 0.2);
+		color: rgba(0, 0, 255, 1.0);
+	}
+	75%{
+		transform: translateZ(10px) rotateZ(-10deg);
+			box-shadow: inset 10px 10px 20px 20px rgba(255, 0, 200, 0.4),
+				4px 4px 20px 5px rgba(255, 0, 200, 0.2),
+				5px 5px 20px 6px rgba(255, 0, 200, 0.2),
+				6px 6px 20px 7px rgba(255, 0, 200, 0.2),
+				7px 7px 20px 8px rgba(255, 0, 200, 0.2),
+				8px 8px 20px 10px rgba(255, 0, 200, 0.2);
+		color: rgba(255, 0, 200, 1.0);
+	}
+	100%{
+		transform: translateZ(0) rotateZ(0deg);
+			box-shadow: inset 10px 10px 20px 20px rgba(255, 0, 0, 0.4),
+				4px 4px 20px 5px rgba(255, 0, 0, 0.2),
+				5px 5px 20px 6px rgba(255, 0, 0, 0.2),
+				6px 6px 20px 7px rgba(255, 0, 0, 0.2),
+				7px 7px 20px 8px rgba(255, 0, 0, 0.2),
+				8px 8px 20px 10px rgba(255, 0, 0, 0.2);
+		color: rgba(255, 0, 0, 1.0);
+	}
 }
-#nextpagebtn a{
-	text-decoration: none;
-}
-#nextpagebtn a i{
-	font-size: 4em;
-	color: darkred;
-	border: none;
-}
+
+
+
