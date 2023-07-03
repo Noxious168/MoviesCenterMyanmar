@@ -3,7 +3,131 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-body{
-	background: black;
+#bg{
+	width: 100%;
 	min-height: 100vh;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	position: absolute;
+	background-image:url('image/dcbg.jpg');
+	filter: brightness(0.7);
+	backdrop-filter: blur(1px);
+}
+
+.table{
+	position: absolute;
+	width: 80%;
+	max-width: 800px;
+	height: 800px;
+	overflow: hidden;
+}
+.row{
+	width: 100%;
+	height: 280px;
+	margin: 15px 30px 15px 30px;
+}
+.items{
+	width: 230px;
+	height: 100%;
+}
+.moviesframe{
+	width: 100%;
+	height: 100%;
+}
+.moviesframe img{
+	width: 160px;
+	height: 200px;
+	margin: 0 30px 12px 30px;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	object-fit: cover;
+	border: 2px solid rgba(0, 0, 0, 1.0);
+	border-radius: 20px;
+	filter: brightness(1.25);
+	cursor: pointer;
+}
+.moviesframe img:hover{
+	filter: brightness(0.7);
+	box-shadow: inset 10px 10px 5px 5px rgba(0, 0, 0, 1.0),
+				10px 10px 10px 10px rgba(0, 0, 0, 0.2),
+				10px 10px 15px 15px rgba(0, 0, 0, 0.3),
+				10px 10px 20px 20px rgba(0, 0, 0, 0.4),
+				10px 10px 25px 25px rgba(0, 0, 0, 0.5),
+				10px 10px 30px 30px rgba(0, 0, 0, 0.6);
+}
+.moviesframe button{
+	cursor: pointer;
+	width: 80%;
+	height: 45px;
+	bottom: 0;
+	background: transparent;
+	border: 2px solid rgba(255, 0, 0, 0.6);
+	border-radius: 50px;
+	color: rgba(255, 0, 0, 0.7);
+}
+.moviesframe button:hover{
+	box-shadow: inset 10px 10px 20px 20px rgba(255, 0, 0, 0.4),
+				4px 4px 20px 5px rgba(255, 0, 0, 0.2),
+				5px 5px 20px 6px rgba(255, 0, 0, 0.2),
+				6px 6px 20px 7px rgba(255, 0, 0, 0.2),
+				7px 7px 20px 8px rgba(255, 0, 0, 0.2),
+				8px 8px 20px 10px rgba(255, 0, 0, 0.2);
+				color: rgba(255, 0, 0, 1.0);
+	animation-delay: 0.2s;
+	animation: buttonAnimation 3s linear infinite;
+}
+@keyframes buttonAnimation{
+	0%{
+		transform: translateZ(0) rotateZ(0deg);
+		box-shadow: inset 10px 10px 20px 20px rgba(255, 0, 0, 0.4),
+					4px 4px 20px 5px rgba(255, 0, 0, 0.2),
+					5px 5px 20px 6px rgba(255, 0, 0, 0.2),
+					6px 6px 20px 7px rgba(255, 0, 0, 0.2),
+					7px 7px 20px 8px rgba(255, 0, 0, 0.2),
+					8px 8px 20px 10px rgba(255, 0, 0, 0.2);
+		color: rgba(255, 0, 0, 1.0);
+	}
+	25%{
+		transform: translateZ(-10px) rotateZ(10deg);
+		box-shadow: inset 10px 10px 20px 20px rgba(0, 255, 0, 0.4),
+				4px 4px 20px 5px rgba(0, 255, 0, 0.2),
+				5px 5px 20px 6px rgba(0, 255, 0, 0.2),
+				6px 6px 20px 7px rgba(0, 255, 0, 0.2),
+				7px 7px 20px 8px rgba(0, 255, 0, 0.2),
+				8px 8px 20px 10px rgba(0, 255, 0, 0.2);
+		color: rgba(0, 255, 0, 1.0);
+	}
+	50%{
+		transform: translateZ(10px) rotateZ(-10deg);
+		box-shadow: inset 10px 10px 20px 20px rgba(0, 0, 255, 0.4),
+				4px 4px 20px 5px rgba(0, 0, 255, 0.2),
+				5px 5px 20px 6px rgba(0, 0, 255, 0.2),
+				6px 6px 20px 7px rgba(0, 0, 255, 0.2),
+				7px 7px 20px 8px rgba(0, 0, 255, 0.2),
+				8px 8px 20px 10px rgba(0, 0, 255, 0.2);
+		color: rgba(0, 0, 255, 1.0);
+	}
+	75%{
+		transform: translateZ(10px) rotateZ(-10deg);
+			box-shadow: inset 10px 10px 20px 20px rgba(255, 0, 200, 0.4),
+				4px 4px 20px 5px rgba(255, 0, 200, 0.2),
+				5px 5px 20px 6px rgba(255, 0, 200, 0.2),
+				6px 6px 20px 7px rgba(255, 0, 200, 0.2),
+				7px 7px 20px 8px rgba(255, 0, 200, 0.2),
+				8px 8px 20px 10px rgba(255, 0, 200, 0.2);
+		color: rgba(255, 0, 200, 1.0);
+	}
+	100%{
+		transform: translateZ(0) rotateZ(0deg);
+			box-shadow: inset 10px 10px 20px 20px rgba(255, 0, 0, 0.4),
+				4px 4px 20px 5px rgba(255, 0, 0, 0.2),
+				5px 5px 20px 6px rgba(255, 0, 0, 0.2),
+				6px 6px 20px 7px rgba(255, 0, 0, 0.2),
+				7px 7px 20px 8px rgba(255, 0, 0, 0.2),
+				8px 8px 20px 10px rgba(255, 0, 0, 0.2);
+		color: rgba(255, 0, 0, 1.0);
+	}
 }

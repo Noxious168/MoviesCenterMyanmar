@@ -51,3 +51,6 @@ guardians.addEventListener("click",()=>{
 series.addEventListener("click",()=>{
 	window.location.href="series/series.html";
 });
+function PlayMoviesXMen(anyLinkForPlay){
+	window.location.href=anyLinkForPlay;
+}
