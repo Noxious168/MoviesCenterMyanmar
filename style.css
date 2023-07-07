@@ -203,11 +203,11 @@ header span:nth-child(14){
 }
 .container{
 	position: absolute;
-	width: 440px;
+	width: 500px;
 	height: 100vh;
 	left: 0;
 	margin-top: 13%;
-	overflow: auto;
+	overflow: hidden;
 	border-radius: 0 20px 20px 0;
 /*	overflow: hidden;*/
 /*	display: none;
@@ -219,18 +219,16 @@ header span:nth-child(14){
 }
 
 .container .moviesLists{
-	width: 100%;
-	height: wrap;
+	max-width: 100%;
+	height: 100%;
 	background: #transparent;
 	padding-top: 10px;
 	border-radius: 0 0 20px 0;
-	display: list-item;
-	justify-content: center;
-	align-items: center;
+
 }
 .container .moviesLists ul{
 	width: 100%;
-	height: wrap;
+	height: 100%;
 	display: list-item;
 	justify-content: center;
 	align-items: center;
@@ -238,20 +236,25 @@ header span:nth-child(14){
 */
 }
 .container .moviesLists ul li{
-	width: 360px;
-	heignt: 48px;
+	width: 300px;
+	height: 60px;
+	margin-top: -8px;
+	font-size: 1.4em;
+	font-weight: 500;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	background: #transparent;
 	backdrop-filter: blur(5px);
 	border-radius: 40px;
 	list-style: none;
 	border: 3px solid rgba(0, 250, 255, 1.0);
-	margin-top: -8px;
-	padding-top: 20px;
 	transition: 0.5s;
 }
 .container .moviesLists ul li:hover{
 	margin-top: 8px;
-	width: 480px;
+	width: 430px;
+	height: 80px;
 	margin-bottom: 16px;
 	font-size: 1.6em;
 	font-shadow: 5px 5px rgba(0, 250, 255, 1.0);
