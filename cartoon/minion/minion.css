@@ -1,0 +1,145 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	width: 100%;
+	min-height: 100vh;
+	background-image: url('image/minion_bg.jpg');
+	background-size: cover;
+	backdrop-filter: blur(2px);
+	overflow: hidden;
+}
+.container {
+	user-select: none;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.moviesrow{
+	width: 100%;
+	height: 300px;
+	margin: 0 15px 0 15px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.titles{
+	width: 300px;
+	height: 100%;
+	margin: 0 10px 0 10px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.titles img{
+	cursor: pointer;
+	top: 0;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 160px;
+	height: 230px;
+	border-radius: 20px;
+	border: 3px solid rgba(90, 12, 189, 0.5);
+}
+.titles img:hover{
+	width: 180px;
+	height: 250px;
+	border: 5px solid rgba(90, 12, 189, 1.0);
+	box-shadow: 3px 3px 4px 6px rgba(90, 12, 189, 0.2),
+				3px 3px 6px 8px rgba(90, 12, 189, 0.2),
+				3px 3px 8px 10px rgba(90, 12, 189, 0.2),
+				3px 3px 10px 12px rgba(90, 12, 189, 0.2),
+				3px 3px 12px 14px rgba(90, 12, 189, 0.2);
+	transform-style: preserve-3d;
+	animation: buttonAnimation 3s linear;
+}
+
+.titles button{
+	cursor: pointer;
+	width: 100%;
+	height: 45px;
+	position: absolute;
+	display: flex;
+	border: 2px solid rgba(96, 3, 212, 1.0);
+	justify-content: center;
+	align-items: center;
+	bottom: 0;
+	background: transparent;
+	backdrop-filter: blur(10px);
+	font-size: 1.2em;
+	font-weight: 500;
+	color: rgba(90, 12, 189, 1.0);
+	border-radius: 50px
+
+}
+.titles button:hover{
+	height: 50px;
+	transform-style: preserve-3d;
+	animation: buttonAnimation 0.7s linear infinite;
+}
+@keyframes buttonAnimation{
+	0%{
+		transform: translateZ(0px) rotateX(0deg);
+		border: 5px solid rgba(90, 12, 189, 1.0);
+		box-shadow: inset 100px 100px 4px 6px rgba(90, 12, 189, 0.4),
+				3px 3px 4px 6px rgba(90, 12, 189, 0.2),
+				3px 3px 6px 8px rgba(90, 12, 189, 0.2),
+				3px 3px 8px 10px rgba(90, 12, 189, 0.2),
+				3px 3px 10px 12px rgba(90, 12, 189, 0.2),
+				3px 3px 12px 14px rgba(90, 12, 189, 0.2);
+		color: rgba(90, 12, 189, 1.0);
+	}
+	25%{
+		transform: translateZ(-60px) rotateX(-40deg);
+		border: 5px solid rgba(160, 8, 231, 1.0);
+		color: rgba(160, 8, 231, 1.0);
+		box-shadow: inset 100px 100px 4px 6px rgba(160, 8, 231, 0.4),
+				3px 3px 4px 6px rgba(160, 8, 231, 0.2),
+				3px 3px 6px 8px rgba(160, 8, 231, 0.2),
+				3px 3px 8px 10px rgba(160, 8, 231, 0.2),
+				3px 3px 10px 12px rgba(160, 8, 231, 0.2),
+				3px 3px 12px 14px rgba(160, 8, 231, 0.2);
+	}
+	50%{
+		transform: translateZ(60px) rotateX(40deg);
+		border: 5px solid rgba(193, 8, 231, 1.0);
+		color: rgba(193, 8, 231, 1.0);
+		box-shadow: inset 100px 100px 4px 6px rgba(193, 8, 231, 0.4),
+				3px 3px 4px 6px rgba(193, 8, 231, 0.2),
+				3px 3px 6px 8px rgba(193, 8, 231, 0.2),
+				3px 3px 8px 10px rgba(193, 8, 231, 0.2),
+				3px 3px 10px 12px rgba(193, 8, 231, 0.2),
+				3px 3px 12px 14px rgba(193, 8, 231, 0.2);
+	}
+	75%{
+		transform: translateZ(-60px) rotateX(-40deg);
+		border: 5px solid rgba(222, 8, 231, 1.0);
+		color: rgba(222, 8, 231, 1.0);
+		box-shadow: inset 100px 100px 4px 6px rgba(222, 8, 231, 0.4),
+				3px 3px 4px 6px rgba(222, 8, 231, 0.2),
+				3px 3px 6px 8px rgba(222, 8, 231, 0.2),
+				3px 3px 8px 10px rgba(222, 8, 231, 0.2),
+				3px 3px 10px 12px rgba(222, 8, 231, 0.2),
+				3px 3px 12px 14px rgba(222, 8, 231, 0.2);
+	}
+	100%{
+		transform: translateZ(0px) rotateX(0deg);
+		border: 5px solid rgba(90, 12, 189, 1.0);
+		color: rgba(90, 12, 189, 1.0);
+		box-shadow: inset 100px 100px 4px 6px rgba(90, 12, 189, 0.4),
+				3px 3px 4px 6px rgba(90, 12, 189, 0.2),
+				3px 3px 6px 8px rgba(90, 12, 189, 0.2),
+				3px 3px 8px 10px rgba(90, 12, 189, 0.2),
+				3px 3px 10px 12px rgba(90, 12, 189, 0.2),
+				3px 3px 12px 14px rgba(90, 12, 189, 0.2);
+	}
+}
