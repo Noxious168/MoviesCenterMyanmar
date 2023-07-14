@@ -6,7 +6,7 @@
 body{
 	width: 100%;
 	min-height: 100vh;
-	background-image: url('image/madagascar_bg.jpg');
+	background-image: url('image/zodiac_bg.jpg');
 	background-size: cover;
 	backdrop-filter: blur(2px);
 	overflow: hidden;
@@ -15,19 +15,11 @@ body{
 	user-select: none;
 	width: 100%;
 	height: 100%;
-	position: absolute;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 }
 .moviesrow{
 	width: 100%;
 	height: 300px;
 	margin: 0 15px 0 15px;
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 }
 .titles{
 	width: 300px;
